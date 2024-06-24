@@ -28,18 +28,6 @@ const library = {
 // FUNCTIONS TO IMPLEMENT:
 /////////////////////////////
 
-//this would be the function to sort
-const sortTrackInfo = function(index, callback) {
-       const trackIds = Object.keys(index.tracks)
-       for (let id = 0; id < trackIds.length; id++) {
-              for (let x in library.tracks[trackIds[id]]) {
-                     // console.log(`${x} = ${library.tracks[trackIds[id]][x]}`)
-                     let currentInfo = library.tracks[trackIds[id]][x]
-                     console.log(callback(currentInfo))
-              }
-       }
-}
-
 // prints a list of all playlists, in the form:
 // p01: Coding Music - 2 tracks
 // p02: Other Playlist - 1 tracks
@@ -50,7 +38,8 @@ const printPlaylists = function(library) {
        }
 };
 
-// printPlaylists(library);
+console.log("--printPlaylists:")
+printPlaylists(library);
 
 // prints a list of all tracks, using the following format:
 // t01: Code Monkey by Jonathan Coulton (Thing a Week Three)
@@ -63,7 +52,8 @@ const printTracks = function(library) {
        }
 };
 
-// printTracks(library)
+console.log("--printTracks:")
+printTracks(library)
 
 // prints a list of tracks for a given playlist, using the following format:
 // p01: Coding Music - 2 tracks
@@ -82,22 +72,21 @@ const printPlaylist = function(library, playlistId) {
        }
 };
 
-//printPlaylist(library, "p01")
+console.log("--printPlaylist:")
+printPlaylist(library, "p01")
 
 // adds an existing track to an existing playlist
 const addTrackToPlaylist = function(trackId, playlistId) {
        library.playlists[playlistId].tracks.push(trackId);
 }
 
-// addTrackToPlaylist("t03", "p01");
+addTrackToPlaylist("t03", "p01");
 
 // generates a unique id
 // (already implemented: use this for addTrack and addPlaylist)
 const generateUid = function() {
   return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
 }
-
-console.log()
 
 // adds a track to the library
 const addTrack = function(name, artist, album) {
