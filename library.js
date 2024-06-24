@@ -104,3 +104,6 @@ const addPlaylist = function(name) {
 };
 
 addPlaylist("Fun Playlist");
+
+//requires code review
+// - How can I refactor code to become dryer?
