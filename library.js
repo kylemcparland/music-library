@@ -109,6 +109,6 @@ addPlaylist("Fun Playlist")
 // where the name, artist or album contains the query string (case insensitive)
 // tip: use "string".search("tri") 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
-const printSearchResults = function(query) {
+// const printSearchResults = function(query) {
 
-}
+// }
